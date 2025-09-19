@@ -1,0 +1,613 @@
+
+body{
+    margin: 0;
+    padding-left: 302px;
+    background-color: #F4F7FD;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+}
+
+@layer SIDEBAR{
+
+    nav{
+        width: 300px;
+        height: 1024px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        border-right: 1px solid #e4ebfa
+    }
+
+    .logo-wrapper{
+        margin: 33px 113px 54px 34px;
+    }
+
+    .app-name{
+        width: 113px;
+        height: 25px;
+        margin-left: 10px;
+    }
+
+    .app-logo{
+        width: 25px;
+        height: 24px;
+    }
+
+    .boards-container > h4{
+        padding: 0 12px 0 50px;
+        color: #828FA3;
+        letter-spacing: 2.4px;
+        font-size: 12px;
+    }
+
+    .boards-container > button{
+        box-sizing: border-box;
+        width: 276px;
+        height: 48px;
+        padding: 28px 12px 28px 50px; 
+        border: none;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        background-color: #635FC7;
+        color: white;
+        font-family: inherit;
+        font-size: 0.9375rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@layer HEADER{
+    header{
+        box-sizing: border-box;
+        height: 96px;
+        background-color: white;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #E4EBFA;
+    }
+
+    .add-task-btn{
+        width: 164px;
+        height: 48px;
+        background-color: #635FC7;
+        border: none;
+        border-radius: 24px;
+        font-weight: bold;
+        font-size: 15px;
+        font-family: inherit;
+        line-height: 1;
+        color: white;
+    }
+
+    .flex-header{
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-favicon-icon{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        display: none;
+    }
+
+     h2{
+        font-family: inherit;
+        font-size:  1.5rem;
+        font-weight: 600;
+        color: #000112;
+        margin: 0;
+    }
+}
+
+@layer MAIN{
+    
+    main{
+        box-sizing: border-box;
+        padding-left: 35px;
+        display: flex;
+        gap: 25px
+    }
+
+    @layer TODO{
+
+        .todo-list-container{
+            width: 280px;
+        }
+
+        .todo-list{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .todo-list > span{
+            width: 15px;
+            height: 15px;
+            background-color: #49C4E5;
+            display: inline-block;
+            border-radius: 100%;
+        }
+
+        .todo-list > h4{
+            font-size: 12px;
+            letter-spacing: 2.4px;
+            line-height: 1;
+            font-weight: 700;
+            color: #828FA3;
+        }
+
+        .todo-flex-container > div{
+            box-sizing: border-box;
+            width: 280px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px 0 #364E7E1A;
+            /*styling for the text inside the div*/   
+            font-size: 0.9375rem;
+            font-family: inherit;
+            font-weight: bold;
+            color: #000112;
+            cursor: pointer;
+            transition: width 0.3s;
+        }
+
+        .todo-flex-container > div:hover{
+            width: 290px;
+            box-shadow: 5px 7px 6px 0 #364E7E1A;
+        }
+
+        .todo-flex-container > div:active{
+            border: 2px solid #364E7E1A;
+        }
+
+        .todo-flex-container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    @layer DOING{
+
+        .doing-list-container{
+            width: 280px;
+        }
+
+        .doing-list{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doing-list > span{
+            width: 15px;
+            height: 15px;
+            background-color: #8471F2;
+            display: inline-block;
+            border-radius: 100%;
+        }
+
+        .doing-list > h4{
+            font-size: 12px;
+            letter-spacing: 2.4px;
+            line-height: 1;
+            font-weight: 700;
+            color: #828FA3;
+        }
+
+        .doing-flex-container > div{
+            box-sizing: border-box;
+            width: 280px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px 0 #364E7E1A;
+            /*styling for the text inside the div*/   
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #000112;
+            cursor: pointer;
+            transition: width 0.3s;
+        }
+
+         .doing-flex-container > div:hover{
+            width: 290px;
+            box-shadow: 5px 7px 6px 0 #364E7E1A;
+        }
+
+        .doing-flex-container > div:active{
+            border: 2px solid #364E7E1A;
+        }
+
+        .doing-flex-container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    @layer DONE{
+
+        .done-list-container{
+            width: 280px;
+        }
+
+        .done-list{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .done-list > span{
+            width: 15px;
+            height: 15px;
+            background-color: #67E2AE;
+            display: inline-block;
+            border-radius: 100%;
+        }
+
+        .done-list > h4{
+            font-size: 12px;
+            letter-spacing: 2.4px;
+            line-height: 1;
+            font-weight: 700;
+            color: #828FA3;
+        }
+
+        .done-flex-container > div{
+            box-sizing: border-box;
+            width: 280px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px 0 #364E7E1A;
+            /*styling for the text inside the div*/   
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #000112;
+            cursor: pointer;
+            transition: width 0.3s;
+        }
+
+        .done-flex-container > div:hover{
+            width: 290px;
+            box-shadow: 5px 7px 6px 0 #364E7E1A;
+        }
+
+        .done-flex-container > div:active{
+            border: 2px solid #364E7E1A;
+        }
+
+        .done-flex-container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    @layer MODAL{
+        .modal-container{
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .display-modal{
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal{
+            box-sizing: border-box;
+            width: 600px;
+            height: 415px;
+            border-radius: 6px;
+            background-color: white;
+            padding: 25px;
+        }
+
+        form{
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form > label{
+            display: block;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 1;
+            letter-spacing: 0px;
+            color: #828FA3;
+        }
+
+        ::placeholder{
+            color: #000112;
+            opacity: 25%;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        .modal-header-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-header{
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0px;
+            color: #000112;
+        }
+
+        .close-btn{
+            background-color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .close-btn > img{
+            width: 15px;
+            height: 15px;
+        }
+
+        /*TITLE INPUT*/
+        .input-title{
+            box-sizing: border-box;
+            width: 551px;
+            height: 41px; 
+            border: 1px solid #828FA340;
+            border-radius: 4px;
+            padding: 0 10px;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        /*DESCRIPTION INPUT*/
+        .input-description{
+            box-sizing: border-box;
+            width: 551px;
+            height: 114px;
+            border: 1px solid #828FA340;
+            border-radius: 4px;
+            resize: none;
+            font-family: inherit;
+            font-size: 13px;
+            letter-spacing: 1px;
+            line-height: 23px;
+            padding: 5px 10px;
+            font-weight: 500;
+        }
+
+        /*STATUS INPUT*/
+        .input-status{
+            box-sizing: border-box;
+            width: 551px;
+            height: 41px; 
+            border: 1px solid #828FA340;
+            border-radius: 4px;
+            padding: 0 20px;
+            background-color: white;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        select, select > option{
+            font-family: inherit;
+        }
+
+        /*****Custom Dropdown Arrow*****/
+        select{
+            appearance: none; /*Hides the default arrow*/
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url(images/Path.svg); /*custom arrow svg*/
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            cursor: pointer;
+        }
+    }
+}
+
+/*=============
+   Tablet View*/
+@media screen and (max-width: 1023px) {
+    body{
+        padding: 0;
+        padding-top: 64px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    /***HEADER***/
+    header{
+        height: 64px;
+        padding-left: 18px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .add-task-btn{
+        width: 164px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    h2{
+        font-size: 1rem;
+
+    }
+
+    .mobile-favicon-icon{
+        display: inline;
+    }
+
+    /***MAIN***/
+    main{
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 360px));
+        column-gap: 8px;
+    }
+
+    .todo-flex-container > div{
+        width: 336px
+    }
+
+    .todo-list-container, .doing-list-container, .done-list-container{
+        padding: 12px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .doing-flex-container > div{
+        width: 336px
+    }
+
+    .done-flex-container > div{
+        width: 336px
+    }
+
+    .dot{
+        width: 8px;
+        height: 8px;
+    }
+
+    h4{
+        margin: 0;
+        font-size: 0.75rem;
+    }
+
+    .todo-list, .doing-list, .done-list{
+        gap: 10px
+    }
+}
+
+ /*MOBILE VIEW*/
+@media (max-width: 375px){
+    .logo-wrapper{
+        margin: 16px 150px 16px 16px
+    }
+
+    body{
+        padding: 0;
+        padding: 64px 16px;
+    }
+
+    nav{
+        width: 375px;
+        height: 64px;
+        display:flex;
+        align-items: center;
+    }
+
+    .mobile-add-task-btn{
+        height: 33px;
+        width: 33px;
+        border: none;
+        border-radius: 24px;
+        background-color: #635FC7;
+        color: white;
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        display: none;
+    }
+
+    main{
+        flex-direction: column;
+        display: block;
+        
+    }
+
+    .todo-list, .doing-list, .done-list{
+        margin: 15px 0;
+    }
+
+    .dot{
+        width: 15px;
+        height: 15px;
+    }
+    .boards-container, header{
+        display: none;
+    }
+
+    .todo-flex-container > div{
+        width: 320px;
+    }
+    
+    .doing-flex-container > div{
+        width: 320px;
+    }
+
+    .done-flex-container > div{
+        width: 320px;
+    }
+
+    /*Mobile modal view*/
+    .modal{
+        width: 343px;
+        height: 410px;
+        position: absolute;
+        left: 14px;
+    }
+
+    .input-title{
+        width: 295px;
+        height: 40px;
+    }
+
+    .input-description{
+        width: 295px;
+        height: 112px;
+    }
+
+    .input-status{
+        width: 295px;
+        height: 40px;
+    }
+
+    select{
+        background-size: 9.4px 4.7px;
+    }
+
+}

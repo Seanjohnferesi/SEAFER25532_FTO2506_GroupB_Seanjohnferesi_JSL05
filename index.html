@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon.svg"
+    />
+    <title>Kanban Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+     <nav>
+        <div class="logo-wrapper">
+            <img src="images/favicon.svg" alt="Kanban logo" class="app-logo">
+            <img src="images/kanban.svg" alt="Kanban app name" class="app-name">
+        </div>
+        <div class="boards-container">
+            <h4>ALL BOARDS (1)</h4>
+            <button>Launch Career</button>
+        </div>
+        <button class="mobile-add-task-btn">+</button>
+    </nav>
+
+    <header>
+        <div class="flex-header">
+            <img src="images/favicon.svg" class="mobile-favicon-icon">
+          <h2>Launch Career</h2>
+        </div>
+        <button class="add-task-btn">+ Add New Task</button>
+    </header>
+
+    <main class="task-columns-container"> 
+        <section class="todo-list-container">
+            <div class="todo-list">
+                <span class="todo-dot dot"></span>
+                <h4>TODO (4)</h4>
+            </div>
+            
+            <div class="todo-flex-container" id="todo-col">
+        
+            </div>
+        </section>
+
+        <section class="doing-list-container">
+            <div class="doing-list">
+                <span class="doing-dot dot"></span>
+                <h4>DOING (2)</h4>
+            </div>
+
+            <div class="doing-flex-container" id="doing-col">
+              
+            </div>
+        </section>
+
+        <section class="done-list-container">
+            <div class="done-list">
+                <span class="done-dot dot"></span>
+                <h4>DONE (2)</h4>
+            </div>
+
+            <div class="done-flex-container" id="done-col">
+                
+            </div>
+        </section>
+
+        <section class="modal-container" id="modal-cnt">
+            
+            <div class="modal">
+                <div class="modal-header-container">
+                    <span class="modal-header">Task</span>
+                    <button class="close-btn" id="close-btn">
+                        <img src="images/close-button.svg">
+                    </button>
+                </div>
+                
+                <form>
+                    <label class="form-title">Title</label>
+                    <input type="text" id="input-title" class="input-title" placeholder="e.g. Take chilled break">
+                    
+                    <label class="form-description">Description</label>
+                    <textarea id="input-description" class="input-description"></textarea>
+
+                    <label class="form-status">Status</label>
+                    <select class="input-status" id="input-status" name="status">
+                        <option value="todo">todo</option>
+                        <option value="doing">doing</option>
+                        <option value="done">done</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
