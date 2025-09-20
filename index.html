@@ -33,7 +33,7 @@
             <img src="images/favicon.svg" class="mobile-favicon-icon">
           <h2>Launch Career</h2>
         </div>
-        <button class="add-task-btn">+ Add New Task</button>
+        <button class="add-task-btn" id="add-task-btn">+ Add New Task</button>
     </header>
 
     <main class="task-columns-container"> 
@@ -70,8 +70,8 @@
             </div>
         </section>
 
+        <!-- FIRST MODAL -->
         <section class="modal-container" id="modal-cnt">
-            
             <div class="modal">
                 <div class="modal-header-container">
                     <span class="modal-header">Task</span>
@@ -93,6 +93,35 @@
                         <option value="doing">doing</option>
                         <option value="done">done</option>
                     </select>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECOND MODAL -->
+        <section class="modal-container" id="modal-cnt-2">
+            <div class="modal" id="modal-2">
+                <div class="modal-header-container">
+                    <span class="modal-header">Add Task</span>
+                    <button class="close-btn" id="close-btn-2">
+                        <img src="images/close-button.svg">
+                    </button>
+                </div>
+                
+                <form>
+                    <label class="form-title">Title</label>
+                    <input type="text" id="input-title-2" class="input-title" placeholder="e.g. Take chilled break">
+                    
+                    <label class="form-description">Description</label>
+                    <textarea id="input-description-2" class="input-description" placeholder="e.g Pet your, have a cup of coffee, dance to your favourite song and come back to crush this challenge."></textarea>
+
+                    <label class="form-status">Status</label>
+                    <select class="input-status" id="input-status-2" name="status">
+                        <option value="todo">todo</option>
+                        <option value="doing">doing</option>
+                        <option value="done">done</option>
+                    </select>
+
+                    <button type="button" class="create-task-btn">Create Task</button>
                 </form>
             </div>
         </section>

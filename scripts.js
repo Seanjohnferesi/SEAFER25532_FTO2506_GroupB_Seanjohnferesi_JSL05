@@ -19,21 +19,21 @@
   },
 
   {
-    id: 11,
+    id: 4,
     title: "Learn Data Structures and Algorithms 📚",
     description:
       "Study fundamental data structures and algorithms to solve coding problems efficiently",
     status: "todo",
   },
   {
-    id: 12,
+    id: 5,
     title: "Contribute to Open Source Projects 🌐",
     description:
       "Gain practical experience and collaborate with others in the software development community",
     status: "done",
   },
   {
-    id: 13,
+    id: 6,
     title: "Build Portfolio Projects 🛠️",
     description:
       "Create a portfolio showcasing your skills and projects to potential employers",
@@ -49,6 +49,9 @@ const modalClose = document.getElementById("close-btn")
 const titleInput = document.getElementById("input-title")
 const descriptionInput = document.getElementById("input-description")
 const statusInput = document.getElementById("input-status")
+const addTaskBtn = document.getElementById("add-task-btn")
+const addTaskModal = document.getElementById("modal-cnt-2")
+const closeTaskModal = document.getElementById("close-btn-2")
 
 /**Creating the task elements**/
 function createTaskElement(task){
@@ -84,4 +87,14 @@ for(const task of initialTasks){ //Loop through all tasks.
   //click listener so the modal closes.
   modalClose.addEventListener("click", () => {
     modalOpen.classList.remove("display-modal")
+  })
+
+  //click listener so the add task modal open.
+  addTaskBtn.addEventListener("click", () => {
+    addTaskModal.classList.add("display-modal")
+  })
+
+  //click listener so the modal closes.
+  closeTaskModal.addEventListener("click", () => {
+    addTaskModal.classList.remove("display-modal")
   })
