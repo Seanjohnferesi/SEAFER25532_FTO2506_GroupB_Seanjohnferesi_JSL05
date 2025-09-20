@@ -86,6 +86,10 @@ body{
         cursor: pointer;
     }
 
+    .mobile-add-task-btn{
+        display: none;
+    }
+
     .flex-header{
         display: flex;
         align-items: center;
@@ -581,8 +585,15 @@ body{
         font-family: inherit;
         font-size: 15px;
         font-weight: bold;
-        text-align: center;
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+    }
+
+    .mobile-add-task-btn > span{
+        margin-bottom: 6px;
     }
 
     main{

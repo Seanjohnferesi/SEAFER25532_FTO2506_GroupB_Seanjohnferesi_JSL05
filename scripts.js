@@ -1,4 +1,4 @@
- const initialTasks = [
+let initialTasks = [
   {
     id: 1,
     title: "Launch Epic Career 🚀",
@@ -49,9 +49,15 @@ const modalClose = document.getElementById("close-btn")
 const titleInput = document.getElementById("input-title")
 const descriptionInput = document.getElementById("input-description")
 const statusInput = document.getElementById("input-status")
+
+/**Add Task Modal**/
 const addTaskBtn = document.getElementById("add-task-btn")
 const addTaskModal = document.getElementById("modal-cnt-2")
 const closeTaskModal = document.getElementById("close-btn-2")
+const createTask = document.getElementById("create-task")
+const titleInput2 = document.getElementById("input-title-2")
+const descriptionInput2 = document.getElementById("input-description-2")
+const statusInput2 = document.getElementById("input-status-2")
 
 /**Creating the task elements**/
 function createTaskElement(task){
@@ -71,12 +77,30 @@ function appendTask(displayTask, status){
   }
 }
 
-/**Main task rendering loop**/
-for(const task of initialTasks){ //Loop through all tasks.
+//click listener so the modal closes.
+modalClose.addEventListener("click", () => {
+  modalOpen.classList.remove("display-modal")
+})
+
+//click listener so the add task modal open.
+addTaskBtn.addEventListener("click", () => {
+  addTaskModal.classList.add("display-modal")
+})
+
+//click listener so the modal closes.
+closeTaskModal.addEventListener("click", () => {
+  addTaskModal.classList.remove("display-modal")
+})
+
+localStorage.setItem("initialTasks", JSON.stringify(initialTasks));
+
+let tasks = JSON.parse(localStorage.getItem("initialTasks"));
+
+for (const task of tasks){
   const divTask = createTaskElement(task);
   appendTask(divTask, task.status)
 
-//click listener so the modal opens with the task's details when clicked.
+  //click listener so the modal opens with the task's details when clicked.
   divTask.addEventListener("click", () => {
   modalOpen.classList.add("display-modal");
   titleInput.value = task.title;
@@ -84,17 +108,3 @@ for(const task of initialTasks){ //Loop through all tasks.
   statusInput.value = task.status;
 })
 }
-  //click listener so the modal closes.
-  modalClose.addEventListener("click", () => {
-    modalOpen.classList.remove("display-modal")
-  })
-
-  //click listener so the add task modal open.
-  addTaskBtn.addEventListener("click", () => {
-    addTaskModal.classList.add("display-modal")
-  })
-
-  //click listener so the modal closes.
-  closeTaskModal.addEventListener("click", () => {
-    addTaskModal.classList.remove("display-modal")
-  })
