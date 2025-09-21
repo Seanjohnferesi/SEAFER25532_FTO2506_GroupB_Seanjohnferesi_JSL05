@@ -62,7 +62,7 @@ A modular JavaScript-powered Kanban board where tasks are dynamically created fr
 - Clicking a task opens a modal that displays the task’s title, description, and status.
 - The modal allows users to edit task details and is fully responsive for mobile devices. 
 
-## How to Use
+### How to Use
 1. Open `index.html` in your browser  
 2. View tasks in their respective columns  
 3. Click on any task to open the modal  
@@ -71,12 +71,33 @@ A modular JavaScript-powered Kanban board where tasks are dynamically created fr
 
 ---
 
+## 4. Task Board With Local Storage Persistence And Task Creation  
+
+"Task board with local storage; add and categorize tasks in To Do, Doing, Done columns via a modal."
+
+### Features 
+- **Persistent Tasks:** Tasks are saved in local storage, so they remain after refreshing or reopening the page.
+- **Add Task Modal:** Click the **Add Task** button to open a modal where you can input task details.
+- **Task Form:** Enter task title, description, and select status from a dropdown.
+- **Immediate Rendering:** New tasks appear on the board immediately after submission.
+- **Responsive Design:** Modal and task board adapt seamlessly to both desktop and mobile screens.
+- **Modular Code:** JavaScript is split into modules, each handling a single responsibility (local storage, task rendering, modal management).
+
+
+### How to use
+- Click Add Task to open the modal.
+- Fill in the task title, description, and select a status.
+- Submit to add the task to the board.
+- Tasks remain saved and organized even after refreshing the page.
+
+
+
 ## 🛠️ Tech Stack
 
 - **HTML**  
 - **CSS** 
 - **JavaScript**  
-
+- **LocalStorage API**
 ---
 
 ## 📸 Kanban Board Preview
@@ -115,3 +136,14 @@ A modular JavaScript-powered Kanban board where tasks are dynamically created fr
 
 ### Mobile View
 ![Mobile Preview](./assets/mobile-modal.png)
+
+## 📸 Task Board With Local Storage Persistence And Task Creation Overview
+
+### Desktop Task Input Modal  
+![Desktop Task Input Modal](./assets/desktop-task-input.png) 
+
+### Mobile Task Input Modal  
+![Mobile Task Input Modal](./assets/mobile.task-input.png);
+
+### Displayed Task View  
+![Displyed Task View](./assets/mobile.task-input.png);
