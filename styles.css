@@ -653,4 +653,11 @@ body{
         background-size: 9.4px 4.7px;
     }
 
+    #modal-2{
+        height: 479px
+    }
+
+    .create-task-btn{
+        width: 295px ;
+    }
 }
